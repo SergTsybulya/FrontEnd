@@ -4,12 +4,14 @@ h1{
 }
 
 .art{
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-td{
+.gallary{
     border: 6px solid white;    
     height: 300px;
-    width: 150px;   
+    width: 150px;
 }
 #one{
     background-color: #FF8067;
