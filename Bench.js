@@ -24,5 +24,21 @@ function bench(f){
     return new Date() - date;
 }
 
-console.log('Time walkIn: ' + bench(walkIn) + 'ms');
-console.log('Time walkLength: ' + bench(walkLength) + 'ms');
+// console.log('Time walkIn: ' + bench(walkIn) + 'ms');
+// console.log('Time walkLength: ' + bench(walkLength) + 'ms');
+
+
+
+const performance = require('perf_hooks').performance;
+
+var t0 = performance.now();
+walkIn(arr);
+var t1 = performance.now();
+console.log('Performance of walkIn: '+(t1-t0)+ " ms");
+
+var t2 = performance.now();
+walkLength(arr);
+var t3 = performance.now();
+console.log('Performance of walkLength: '+(t3-t2)+ " ms");
+
+
